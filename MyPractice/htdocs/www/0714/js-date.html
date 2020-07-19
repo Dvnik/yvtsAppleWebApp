@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- js-date.html -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      window.onload = function () {
+        let d = new Date();
+        console.log(d);
+        // 取年
+        let year = d.getFullYear();
+        console.log(year);
+        // 取月 注意：getMonth得出來的值是「索引值」（從0開始）
+        let month = d.getMonth() + 1;
+        console.log(month);
+        // 取日
+        let date = d.getDate();
+        console.log(date);
+        // 取星期 注意：星期日為 0
+        let day = d.getDay();
+        let dayArray = ['日', '一', '二', '三', '四', '五', '六'];
+        let dayArray_en = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT'];
+        let dayArray_jp = [
+          '日曜日',
+          '月曜日',
+          '火曜日',
+          '水曜日',
+          '木曜日',
+          '金曜日',
+          '土曜日'
+        ];
+
+        console.log(dayArray[day]);
+        // 取時,分,秒
+        let hours = d.getHours();
+        let minutes = d.getMinutes();
+        let seconds = d.getSeconds();
+        console.log(hours);
+        console.log(minutes);
+        console.log(seconds);
+        console.log(d.toDateString());
+        console.log(d.toTimeString());
+
+        // 字串樣板
+        let text = year + '年' + month + '月' + date + '日';
+        console.log(text);
+        // 類似swift的挖洞語法，但是包起來的不是'或"，而是~鍵的`
+        let text1 = `${year}年${month}月${date}日`;
+        console.log(text1);
+      };
+    </script>
+  </head>
+  <body></body>
+</html>

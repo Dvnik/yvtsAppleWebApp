@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>加入刪除子項目功能</title>
+    <style>
+      .list {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="" id="item" />
+    <button id="btn" onclick="newItem()">ADD</button>
+    <ul id="todo">
+      <li class="list">ITEM</li>
+    </ul>
+    <script>
+      function newItem() {
+        console.log('newItem');
+        let item = document.getElementById('item').value;
+        let itemText = document.createTextNode(item);
+        let li = document.createElement('li');
+        li.appendChild(itemText);
+        li.setAttribute('class', 'list');
+        let todo = document.getElementById('todo');
+        todo.appendChild(li);
+
+        document.getElementById('item').value = '';
+      }
+
+      let alllist = document.querySelectorAll('li');
+      console.log(alllist);
+      alllist.forEach(function (l) {
+        l.addEventListener('click', function () {
+          this.remove();
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        let t1 = $('#title').text();
+
+        console.log(t1);
+        let box = $('.box');
+        console.log(box[0]);
+        console.log(box[1]);
+        console.log(box[2]);
+        console.log(box[3]);
+        for (let i = 0; i < box.length; i++) {
+          console.log(box[i].textContent); //textContent抓取HTML的值(內容)
+        }
+        // by tag name
+        let div = $('div');
+        console.log(div);
+        console.log(div[0]);
+        console.log(div[1]);
+        console.log(div[2]);
+        console.log(div[3]);
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="title">HELLO WORLD</h1>
+    <div class="box">box-1</div>
+    <div class="box">box-2</div>
+    <div class="box">box-3</div>
+    <div class="box">box-4</div>
+
+    <script>
+      //   let t1 = document.getElementById('title');
+      //   console.log(t1);
+
+      //   let box = document.getElementsByClassName('box');
+      //   console.log(box);
+      //   console.log(box[0]);
+      //   console.log(box[1]);
+      //   console.log(box[2]);
+      //   console.log(box[3]);
+      //Uncaught TypeError: box.forEach is not a function
+      //   box.forEach(function (data) {
+      //     console.log(data);
+      //   });
+
+      //   for (let i = 0; i < box.length; i++) {
+      //     console.log(box[i].textContent); //textContent抓取HTML的值(內容)
+      //   }
+
+      // by tag name
+      let div = document.getElementsByTagName('div');
+      console.log(div);
+
+      for (let i = 0; i < div.length; i++) {
+        console.log(div[i]);
+      }
+      // querySelector, querySelectorAll
+      let box1 = document.querySelectorAll('.box');
+      console.log(box1);
+
+      for (let i = 0; i < box1.length; i++) {
+        console.log(box1[i].textContent);
+      }
+
+      box1.forEach(function (e) {
+        console.log(e.textContent);
+      });
+      for (var temp in box1) {
+        console.log(temp);
+      }
+    </script>
+  </body>
+</html>

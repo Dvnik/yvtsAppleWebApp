@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // var 定義
+      var a = 100;
+      if (a == 100) {
+        // {} Block
+        var b = 'success';
+        console.log(b);
+      }
+      console.log(b);
+      // let
+      var b = 100;
+      if (b == 100) {
+        // {} Block
+        let c = 'success1';
+        console.log(c);
+      }
+      //   console.log(c);// js-let.vs.var.html:23 Uncaught ReferenceError: c is not defined
+      // function 內的var
+      function test2() {
+        d = 'hello';
+        console.log(d);
+      }
+      test2();
+      //   console.log(d); // Uncaught ReferenceError: d is not defined
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+      $(function () {
+        $.ajax({
+          //   url: 'http://gis.taiwan.net.tw/XMLReleaseALL_public/hotel_C_f.json',
+          url:
+            'https://json2jsonp.com/?url=http://gis.taiwan.net.tw/XMLReleaseALL_public/hotel_C_f.json&callback=cbfunc',
+          success: function (data) {
+            console.log(data);
+          },
+          error: function () {
+            console.log('error');
+          }
+        });
+      });
+    </script>
+    <script>
+      function cbfunc(data) {
+        console.log(data);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

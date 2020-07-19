@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      let username = new Array();
+      username[0] = 'Joe';
+      username[1] = 'Abby';
+      username[2] = 'Tony';
+      username[3] = 'Wang';
+      username[4] = 'Merry';
+      // 或
+      let username1 = new Array('Joe', 'Abby', 'Tony', 'Wang', 'Merry');
+      // or
+      let username2 = ['Joe', 'Abby', 'Tony', 'Wang', 'Merry'];
+      // 元素拜訪
+      for (let i = 0; i < username2.length; i++) {
+        document.write(username2[i] + '<br>');
+        console.log(username2[i]);
+      }
+
+      username2.forEach(function (e) {
+        console.log(e);
+      });
+
+      for (var temp in username2) {
+        console.log(username2[temp]);
+      }
+
+      // 陣列新增，刪除元素 push(), pop(), unshift(), shift()
+      let a = ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'RWD', 'JQUERY'];
+      console.log(a);
+      a.push('ASP'); // ["HTML", "CSS", "JAVASCRIPT", "PHP", "RWD", "JQUERY", "ASP"]
+      console.log(a);
+      a.pop(); //  ["HTML", "CSS", "JAVASCRIPT", "PHP", "RWD", "JQUERY"]
+      console.log(a);
+      a.shift(); // ["CSS", "JAVASCRIPT", "PHP", "RWD", "JQUERY"]
+      console.log(a);
+      a.unshift('MYSQL'); // ["MYSQL", "CSS", "JAVASCRIPT", "PHP", "RWD", "JQUERY"]
+      console.log(a);
+      // 刪除指定索引編號 >= 以後的值
+      //   a.splice(2); // ["MYSQL", "CSS"]
+      // 刪除指定索引編號開始的 n 筆資料
+      a.splice(2, 1); // ["MYSQL", "CSS", "PHP", "RWD", "JQUERY"]
+      //   delete a[2]; // ["MYSQL", "CSS", empty, "PHP", "RWD", "JQUERY"]
+      console.log(a);
+      // 陣列排序
+      // 字串排列
+      let student_name = new Array('C3', 'B2', 'A1');
+      console.log(student_name);
+      student_name.sort();
+      console.log(student_name); //  ["A1", "B2", "C3"]
+
+      // 數值排列
+      function sort_num(a, b) {
+        // return a - b; // 數字排序由小至大 [-5, 1, 20, 300, 4000]
+        return b - a; // 數字排序由大至小 [4000, 300, 20, 1, -5]
+      }
+      var age = [4000, 300, 20, 1, -5];
+      age.sort(sort_num);
+      console.log(age);
+      // 匿名函式
+      // function () { }
+      // 箭頭函式
+      //   () => {};
+      // 物件
+      let o = {
+        // 屬性
+        name: 'aby',
+        age: 30,
+        mail: 'aby@ms4.hinet.net',
+        subject: ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'RWD', 'JQUERY'],
+        obj: {
+          s1: 'HTML',
+          s2: 'CSS',
+          s3: 'JAVASCRIPT',
+          s4: 'PHP',
+          s5: 'RWD',
+          s6: 'JQUERY'
+        }
+      };
+      console.log(o);
+      // 屬性呼叫
+      console.log(o.name);
+      console.log(o.mail);
+      // 陣列呼叫
+      console.log(o.subject);
+      console.log(o.subject.s5);
+
+      // 陣列元素：物件
+      let arr = [];
+      arr = [
+        {
+          name: 'iPhone XS',
+          color: ['sliver', 'gray', 'gold'],
+          size: ['64gb', '256gb', '512gb']
+        },
+        {
+          name: 'iPhone XS',
+          color: ['sliver', 'gray', 'gold'],
+          size: ['64gb', '256gb', '512gb']
+        },
+        { name: 'iPhone XS', color: 'gray', size: '256gb' },
+        { name: 'iPhone XS', color: 'gold', size: '64gb' }
+      ];
+      console.log(arr);
+      console.log(arr[1].size[4]);
+
+      console.log(arr.length);
+      for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+        for (let j = 0; j < arr[i].color.length; j++) {
+          console.log(arr[i].color[j]);
+        }
+      }
+      //
+    </script>
+  </head>
+  <body></body>
+</html>

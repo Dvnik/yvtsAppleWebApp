@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 100%;
+        background-color: #333;
+      }
+      nav {
+        width: 800px;
+        height: 60px;
+        margin: auto;
+      }
+      nav .logo {
+        float: left;
+      }
+      nav .logo a {
+        padding-right: 50px;
+        font-size: 1.2em;
+        background-color: #555;
+        display: block;
+      }
+      nav .menu {
+        float: left;
+      }
+      nav .menu a:hover {
+        background-color: #666;
+        color: #000;
+      }
+
+      nav .search {
+        float: right;
+      }
+      nav .search a:hover {
+        background-color: #666;
+        color: #000;
+      }
+      nav li {
+        float: left;
+        list-style: none;
+      }
+      nav ul {
+        margin: 0;
+        padding: 0;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        line-height: 60px;
+        padding: 0 15px;
+        display: block;
+        transition: all 1s;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <a href="#">ASUS</a>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#">產品</a></li>
+            <li><a href="#">熱門活動</a></li>
+            <li><a href="#">商用電腦</a></li>
+            <li>
+              <a href="#">ProArt<sup style="color: silver;">NEW</sup></a>
+            </li>
+            <li><a href="#">服務＆社群</a></li>
+            <li><a href="#">商店</a></li>
+          </ul>
+        </div>
+        <div class="search">
+          <ul>
+            <li><a href="#">登入</a></li>
+            <li>
+              <a href="#"><i class="fas fa-search"></i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>

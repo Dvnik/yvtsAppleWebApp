@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+        1.所有的元素要是inline-block
+        2.以最長的元素當作基準點做致中，至少要有1個高度有數值
+        */
+      div {
+        display: inline-block;
+        width: 100px;
+        vertical-align: bottom;
+      }
+      .box-1 {
+        height: 600px;
+        background-color: #fa0;
+      }
+      .box-2 {
+        height: 400px;
+        background-color: #0fa;
+      }
+      .box-3 {
+        height: 100px;
+        background-color: #a0f;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-1"></div>
+    <div class="box-2"></div>
+    <div class="box-3"></div>
+  </body>
+</html>

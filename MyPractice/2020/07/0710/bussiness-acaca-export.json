@@ -1,0 +1,15 @@
+{
+  "broadcast" : {
+    "message" : "break new!! discount!!",
+    "picture" : "product.jpg",
+    "sound" : "happy.mp3",
+    "title" : "new product"
+  },
+  "sales_managers" : [ {
+    "account" : "john",
+    "password" : "123456"
+  }, {
+    "account" : "mary",
+    "password" : "222222"
+  } ]
+}

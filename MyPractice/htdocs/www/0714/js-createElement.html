@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {};
+    </script>
+  </head>
+  <body>
+    <button id="btn" onclick="add()">Click</button>
+    <div id="output"></div>
+    <script>
+      function add() {
+        console.log('add');
+        let element = document.createElement('p');
+        let content = document.createTextNode('Hello World');
+        element.appendChild(content);
+        let output = document.getElementById('output');
+        output.appendChild(element);
+      }
+    </script>
+  </body>
+</html>

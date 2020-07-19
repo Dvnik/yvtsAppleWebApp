@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img {
+        width: 100%;
+      }
+
+      .gallery {
+        width: 500px;
+        margin: auto;
+      }
+      .thumbs img {
+        width: 100px;
+      }
+      .thumbs {
+        text-align: center;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        let thumb = document.querySelectorAll('.thumb');
+        console.log(thumb);
+        /* // forEach 作法
+        thumb.forEach(function (t) {
+          //   console.log(t.getAttribute('data-img'));
+          console.log(t.dataset.img);
+          //   為每張子圖加入監聽事件
+          t.addEventListener('click', function () {
+            // 抓大圖
+            let g = document.getElementById('g');
+            console.log(this.dataset.img);
+            g.setAttribute('src', this.getAttribute('src'));
+          });
+        });
+        */
+        // for 作法
+        for (let i = 0; i < thumb.length; i++) {
+          let item = thumb[i];
+          console.log(item.dataset.img);
+          //   為每張子圖加入監聽事件
+          item.addEventListener('click', function () {
+            // 抓大圖
+            let g = document.getElementById('g');
+            // g.setAttribute('src', this.getAttribute('src'));
+            g.setAttribute('src', `../images/${this.dataset.img}.jpg`);
+          });
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <!-- 大圖一張 -->
+    <div class="gallery">
+      <img src="../images/001.JPG" alt="" id="g" />
+    </div>
+
+    <!-- 縮圖 3~5 張 -->
+    <div class="thumbs">
+      <img src="../images/001.JPG" class="thumb" data-img="001" alt="" />
+      <img src="../images/002.JPG" class="thumb" data-img="002" alt="" />
+      <img src="../images/003.JPG" class="thumb" data-img="003" alt="" />
+      <img src="../images/004.JPG" class="thumb" data-img="004" alt="" />
+      <img src="../images/005.JPG" class="thumb" data-img="005" alt="" />
+    </div>
+  </body>
+</html>

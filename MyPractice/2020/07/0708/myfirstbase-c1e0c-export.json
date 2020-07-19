@@ -1,0 +1,64 @@
+{
+  "三年1班" : [ {
+    "in_school" : true,
+    "name" : "john",
+    "score" : {
+      "english" : 88,
+      "geography" : 78,
+      "math" : 98
+    }
+  }, {
+    "in_school" : true,
+    "name" : "mary",
+    "score" : {
+      "english" : 98,
+      "geography" : 65,
+      "math" : 78
+    }
+  }, {
+    "in_school" : true,
+    "name" : "tom",
+    "score" : {
+      "english" : 38,
+      "geography" : 25,
+      "math" : 65
+    }
+  } ],
+  "三年2班" : [ {
+    "in_school" : true,
+    "name" : "tom",
+    "score" : {
+      "english" : 99,
+      "geography" : 88,
+      "math" : 100
+    }
+  }, {
+    "in_school" : false
+  }, {
+    "in_school" : false
+  } ],
+  "店名" :{
+    "Data": "20200629",
+    "Effect": true,
+    "test": 123,
+    "shop_names": ["成北便當", "成南便當", "好吃便當", "OISHIBENTO", "GGYY"],
+    "more": {
+      "haha": 123,
+      "hoho": false
+    }
+  },
+  "成北便當" :{
+
+    "滷雞腿": 80,
+    "炸雞腿": 80,
+    "炸雞排": 80,
+    "牛肉燴飯": 80,
+    "梅花泡菜飯": 80,
+    "滷排骨": 80,
+    "牛排":80,
+    "豬排":80
+
+
+
+}
+}

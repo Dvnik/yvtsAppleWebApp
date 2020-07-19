@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 600px;
+        font-size: 0;
+      }
+      .box {
+        /*
+          1.有空隙，解:父元素font-size: 0;
+          2.子元素文字不見了？重新設定font-size: 16px;
+          3.區塊內有些沒文字，會有跑位的問題。解：overflow: hidden;
+          */
+        width: 200px;
+        height: 200px;
+        background-color: #ccc;
+        display: inline-block;
+        font-size: 16px;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">box-1</div>
+      <div class="box">box-2</div>
+      <div class="box">box-3</div>
+    </div>
+  </body>
+</html>

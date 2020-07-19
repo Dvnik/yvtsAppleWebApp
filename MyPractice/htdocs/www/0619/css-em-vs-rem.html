@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        font-size: 20px;
+      }
+      /* em底下的元素會以em做基準縮放大小 */
+      .em {
+        font-size: 20px;
+      }
+      .em p {
+        font-size: 1em;
+      }
+      /* rem底下的元素不會跟隨rem做縮放，是跟著root */
+      .rem {
+        font-size: 20px;
+      }
+      .rem p {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- .em>p 快速生成div帶有class標籤 -->
+    <div class="em">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta neque
+        explicabo ea accusamus beatae, voluptatibus, dolorem eaque maiores
+        quaerat autem fugiat tempore numquam rerum eveniet unde non
+        exercitationem, eum accusantium.
+      </p>
+    </div>
+    <div class="rem">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta neque
+        explicabo ea accusamus beatae, voluptatibus, dolorem eaque maiores
+        quaerat autem fugiat tempore numquam rerum eveniet unde non
+        exercitationem, eum accusantium.
+      </p>
+    </div>
+  </body>
+</html>

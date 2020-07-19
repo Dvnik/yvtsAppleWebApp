@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 1100px;
+        height: 760px;
+        background-color: #333;
+        /* font-size: 0px; */
+        margin: auto;
+      }
+      .banner {
+        height: 200px;
+        background-color: chartreuse;
+      }
+
+      nav {
+        width: 100%;
+        height: 60px;
+        /* background-color: #333; */
+        margin: 0 175px;
+        align-items: center;
+      }
+      nav .logo {
+        /* float: left; */
+        display: inline-block;
+        /* vertical-align: top; */
+      }
+      nav .logo a {
+        /* padding-right: 50px; */
+        font-size: 1.2em;
+        /* background-color: #555; */
+        display: block;
+      }
+      nav .logo a:hover {
+        color: #666;
+      }
+      nav .menu {
+        display: inline-block;
+        /* vertical-align: middle; */
+      }
+      nav .menu a:hover {
+        /* background-color: #666; */
+        /* color: #000; */
+        color: #666;
+      }
+      nav li {
+        /* float: left; */
+        list-style: none;
+        display: inline-block;
+        /* vertical-align: middle; */
+      }
+      nav ul {
+        margin: 0;
+        padding: 0;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        line-height: 60px;
+        padding: 0 15px;
+        display: block;
+        transition: all 1s;
+      }
+      .sidebar {
+        width: 200px;
+        height: 500px;
+        background-color: crimson;
+        float: left;
+        text-align: center;
+        color: white;
+        line-height: 500px;
+      }
+      .main {
+        width: 900px;
+        height: 500px;
+        background-color: darkgray;
+        display: inline-block;
+        text-align: center;
+        color: white;
+        line-height: 500px;
+      }
+      footer {
+        height: 20px;
+        background-color: black;
+        color: white;
+        text-align: center;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="banner">
+        <img src="http://source.unsplash.com/random/1100x200" alt="" />
+      </div>
+      <div class="container2">
+        <nav>
+          <div class="logo">
+            <a href="#"><i class="fab fa-apple"></i></a>
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="#">Mac</a></li>
+              <li><a href="#">iPad</a></li>
+              <li><a href="#">iPhone</a></li>
+              <li>
+                <a href="#">Watch</a>
+              </li>
+              <li><a href="#">TV</a></li>
+              <li><a href="#">Music</a></li>
+              <li><a href="#">支援服務</a></li>
+              <li>
+                <a href="#"><i class="fas fa-search"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="sidebar">200x500px Sidebar</div>
+      <div class="main">900x500px main</div>
+      <footer>1100x20px footer</footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>611902350554-93pn1v451gfac3hr52eq9f87lt5m9klh.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.611902350554-93pn1v451gfac3hr52eq9f87lt5m9klh</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCP6rI0mORCItq1zImvc6AZp-j24lVkTBI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>611902350554</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.lulamoon.push-notification-client</string>
+	<key>PROJECT_ID</key>
+	<string>bussiness-acaca</string>
+	<key>STORAGE_BUCKET</key>
+	<string>bussiness-acaca.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:611902350554:ios:9200fa2c059e049745b1e3</string>
+	<key>DATABASE_URL</key>
+	<string>https://bussiness-acaca.firebaseio.com</string>
+</dict>
+</plist>

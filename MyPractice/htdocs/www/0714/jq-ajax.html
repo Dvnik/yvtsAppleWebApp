@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .school {
+        border: 1px solid #000;
+        padding: 15px;
+        margin: auto;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script>
+      $(document).ready(function () {
+        $.ajax({
+          url:
+            'https://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=24c9f8fe-88db-4a6e-895c-498fbc94df94',
+          //   dataType: 'json',
+          success: function (data) {
+            console.log('success');
+            console.log(data);
+            console.log(data.result.results[0].o_tlc_agency_name);
+            console.log(data.result.results[0].o_tlc_agency_address);
+            console.log(data.result.results[0].o_tlc_agency_phone);
+
+            data.result.results.forEach(function (d) {
+              let name = d.o_tlc_agency_name;
+              let address = d.o_tlc_agency_address;
+              let phone = d.o_tlc_agency_phone;
+
+              let content = `
+              <div class="school">
+                <h2>${name}</h2>
+                <p>${address}</p>
+                <p>${phone}</p>
+              </div>
+              `;
+              //加入子物件
+              $('.container').append(content);
+            });
+          }
+        });
+      });
+      // jQuery();
+    </script>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>

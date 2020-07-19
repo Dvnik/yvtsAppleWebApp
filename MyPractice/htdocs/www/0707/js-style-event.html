@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script> -->
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script>
+      window.onload = function () {
+        // let title = document.getElementById('title').style;
+        // console.log(title);
+        // // document.getElementById('title').style.color = '#ff0000';
+        // // document.getElementById('title').style.backgroundColor = 'gray';
+        // title.color = '#ff0000';
+        // title.backgroundColor = 'gray';
+        // title.width = '200px';
+        // title.height = '200px';
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="title">HELLO WORLD</h1>
+    <button onclick="addStyle()">Click</button>
+    <script>
+      function addStyle() {
+        let title = document.getElementById('title').style;
+        title.color = '#ff0000';
+        title.backgroundColor = 'gray';
+        title.width = '200px';
+        title.height = '200px';
+      }
+    </script>
+    <div class="box">box-1</div>
+    <div class="box">box-2</div>
+    <div class="box">box-3</div>
+    <div class="box">box-4</div>
+  </body>
+</html>

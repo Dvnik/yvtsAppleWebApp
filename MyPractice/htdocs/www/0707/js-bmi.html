@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let c1 = document.getElementById('cal');
+        c1.addEventListener('click', function () {
+          let h = document.getElementById('height').value / 100;
+          let w = document.getElementById('weight').value;
+          bmi(h, w);
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <script>
+      function bmi(h, w) {
+        // let h = document.getElementById('height').value / 100;
+        // let w = document.getElementById('weight').value;
+        console.log(h);
+        console.log(w);
+
+        // let b = w / (h * h);
+        let b = w / Math.pow(h, 2);
+        console.log(b);
+
+        // 位數整理
+        // 整數取法
+        // Math.round(b); // 四捨五入
+        // Math.floor(); // 無條件捨去
+        // Math.ceil(); // 無條件進位
+        // 小數位數取法
+        // Math.floor(b * 10) / 10; // 取1位小數
+        // Math.floor(b * 100) / 100; // 取2位小數
+
+        document.getElementById('output').textContent =
+          Math.floor(b * 1000) / 1000;
+      }
+    </script>
+    身高：<input
+      type="text"
+      name=""
+      id="height"
+      placeholder="輸入身高(公分)"
+    /><br />
+    體重：<input
+      type="text"
+      name=""
+      id="weight"
+      placeholder="輸入體重(公斤)"
+    /><br />
+    <button id="cal">計算 BMI</button>
+    <div id="output"></div>
+  </body>
+</html>

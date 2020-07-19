@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      test();
+      test();
+      // 自定程序 -> 提升性
+      function test() {
+        let a = 100;
+        console.log(a);
+      }
+
+      let aa = function () {
+        console.log('匿名函數');
+      };
+      aa();
+
+      // 有參數的寫法
+      function test1(a, b) {
+        console.log(a + b);
+      }
+      test1(50, 50);
+    </script>
+  </head>
+  <body></body>
+</html>

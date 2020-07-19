@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- js-getAttribute.html -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let t = document.getElementById('title');
+        console.log(t.dataset.key);
+        console.log(t.dataset.value);
+        // 抓取元素
+        console.log(t.getAttribute('id'));
+        console.log(t.getAttribute('data-key'));
+        console.log(t.getAttribute('data-value'));
+      };
+    </script>
+  </head>
+  <body>
+    <h1 id="title" data-key="apple" data-value="50">TITLE</h1>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vje-OK-tBG">
+                                <rect key="frame" x="57" y="148" width="300" height="300"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVq-Qx-Kl4">
+                                <rect key="frame" x="57" y="508" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="4K4-py-F1J"/>
+                                    <constraint firstAttribute="height" constant="80" id="etD-Lo-8Mj"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="play.png"/>
+                                <connections>
+                                    <action selector="buttonPlayAndPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gde-KL-cJ4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0F-tN-Nep">
+                                <rect key="frame" x="277" y="508" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="7Wk-jw-L9S"/>
+                                    <constraint firstAttribute="width" constant="80" id="qM7-6X-XGq"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="stop.png"/>
+                                <connections>
+                                    <action selector="buttonStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fkE-9Z-YJ8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78297647126296899" green="1" blue="0.91428511661280332" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="H0F-tN-Nep" firstAttribute="trailing" secondItem="Vje-OK-tBG" secondAttribute="trailing" id="7cE-gx-YkV"/>
+                            <constraint firstItem="Vje-OK-tBG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="AGU-2N-Sg0"/>
+                            <constraint firstItem="H0F-tN-Nep" firstAttribute="top" secondItem="Vje-OK-tBG" secondAttribute="bottom" constant="60" id="KXF-Gy-0xT"/>
+                            <constraint firstItem="Vje-OK-tBG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YrQ-n3-bSc"/>
+                            <constraint firstItem="MVq-Qx-Kl4" firstAttribute="top" secondItem="Vje-OK-tBG" secondAttribute="bottom" constant="60" id="wI3-KV-Pme"/>
+                            <constraint firstItem="MVq-Qx-Kl4" firstAttribute="leading" secondItem="Vje-OK-tBG" secondAttribute="leading" id="yLU-E3-Tz6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="105.80357142857143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="music.png" width="300" height="300"/>
+        <image name="play.png" width="256" height="256"/>
+        <image name="stop.png" width="256" height="256"/>
+    </resources>
+</document>
