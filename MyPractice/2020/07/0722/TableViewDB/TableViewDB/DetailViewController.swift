@@ -162,10 +162,12 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     //修改資料
     @IBAction func btnUpdate(_ sender: UIButton)
     {
+        //Setp0.比對介面資料是否合法
+        txtClass.text = arrClass[pkvClass.selectedRow(inComponent: 0)]
         // Step1.更新資料庫資料
         //Todo:
-        //回寫上一頁的陣列資料
-        myTableViewController.arrTable[myTableViewController.currentRow] = Student(no: lblNo.text!, name: txtName.text!, gender: 0, picture: imgPicture.image?.jpegData(compressionQuality: 0.8), phone: txtPhone.text!, address: txtAddress.text!, email: txtEmail.text!, myclass: txtClass.text!)
+        //Step2.回寫上一頁的陣列資料
+        myTableViewController.arrTable[myTableViewController.currentRow] = Student(no: lblNo.text!, name: txtName.text!, gender: pkvGender.selectedRow(inComponent: 0), picture: imgPicture.image?.jpegData(compressionQuality: 0.8), phone: txtPhone.text!, address: txtAddress.text!, email: txtEmail.text!, myclass: txtClass.text!)
         
         print("修改過後的當筆資料：\(myTableViewController.arrTable[myTableViewController.currentRow])")
     }
@@ -214,14 +216,14 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         //建立班別滾輪(注意：tag值對應原textfield的tag值)
         pkvClass = UIPickerView()
         pkvClass.tag = 4
-        //將性別滾輪與班別滾輪替換為原先預設的虛擬鍵盤
-        txtGender.inputView = pkvGender
-        txtClass.inputView = pkvClass
         //指派此類別實作滾輪的資料來源與相關代理事件
         pkvGender.dataSource = self
         pkvGender.delegate = self
         pkvClass.dataSource = self
         pkvGender.delegate = self
+        //將性別滾輪與班別滾輪替換為原先預設的虛擬鍵盤
+        txtGender.inputView = pkvGender
+        txtClass.inputView = pkvClass
         //選定目前資料所在的性別滾輪
         pkvGender.selectRow(currentData.gender, inComponent: 0, animated: false)
         // 迴圈列出原來提供給滾輪的陣列資料(展成索引、內容的Tuple)

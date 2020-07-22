@@ -84,7 +84,11 @@ class MyTableViewController: UITableViewController
     @objc func buttonAddAction()
     {
         print("新增按鈕被按下！")
+        // 從Storyboard上以ID取得頁面的實體
         let addVC = self.storyboard!.instantiateViewController(identifier: "AddViewController") as! AddViewController
+        // 通知新增畫面目前表格控制器的實體
+        addVC.myTableViewController = self
+        // 顯示新增畫面
         self.show(addVC, sender: nil)
     }
     

@@ -19,6 +19,8 @@ class MyCell: UITableViewCell
         imgPicture.clipsToBounds = true
         imgPicture.contentMode = .scaleAspectFill
         imgPicture.layer.cornerRadius = imgPicture.bounds.size.width / 2
+        //儲存格背景色已系統色調配（可是應深色模式dark mode）
+        self.backgroundColor = UIColor.systemFill
     }
     
     // 
