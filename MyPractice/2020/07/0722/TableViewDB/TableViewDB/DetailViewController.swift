@@ -224,10 +224,16 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         pkvGender.delegate = self
         //選定目前資料所在的性別滾輪
         pkvGender.selectRow(currentData.gender, inComponent: 0, animated: false)
-        
+        // 迴圈列出原來提供給滾輪的陣列資料(展成索引、內容的Tuple)
         for (index,item) in arrClass.enumerated()
         {
-            
+            // 逐一比對當筆的班別是否與原陣列資料相同
+            if item == txtClass.text
+            {
+                //如果相同就以陣列的索引直來選定滾輪
+                pkvClass.selectRow(index, inComponent: 0, animated: false)
+                break
+            }
         }
     }
     //MARK:- Touch Event
@@ -287,6 +293,18 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             
         }
         
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        if pickerView.tag == 2
+        {
+            txtGender.text = arrGender[row]
+        }
+        else if pickerView.tag == 4
+        {
+            txtClass.text = arrClass[row]
+        }
     }
 
 }
