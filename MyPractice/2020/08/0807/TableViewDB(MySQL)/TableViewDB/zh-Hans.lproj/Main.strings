@@ -1,0 +1,92 @@
+
+/* Class = "UILabel"; text = "姓名"; ObjectID = "0H8-7B-3Y3"; */
+"0H8-7B-3Y3.text" = "姓名";
+
+/* Class = "UIButton"; normalTitle = "修改资料"; ObjectID = "0yy-4Q-YIZ"; */
+"0yy-4Q-YIZ.normalTitle" = "修改资料";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "2eo-3v-PYH"; */
+"2eo-3v-PYH.text" = "Email";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "4ah-1j-DQA"; */
+"4ah-1j-DQA.text" = "Label";
+
+/* Class = "UILabel"; text = "学号"; ObjectID = "Di5-iL-nRZ"; */
+"Di5-iL-nRZ.text" = "学号";
+
+/* Class = "UILabel"; text = "姓名"; ObjectID = "Dst-5h-Qui"; */
+"Dst-5h-Qui.text" = "姓名";
+
+/* Class = "UILabel"; text = "电话"; ObjectID = "Fcc-OW-e1e"; */
+"Fcc-OW-e1e.text" = "电话";
+
+/* Class = "UILabel"; text = "姓名："; ObjectID = "IQ1-ce-a52"; */
+"IQ1-ce-a52.text" = "姓名：";
+
+/* Class = "UILabel"; text = "性别："; ObjectID = "JGN-lU-Jbv"; */
+"JGN-lU-Jbv.text" = "性别：";
+
+/* Class = "UITextField"; text = "手机程式设计"; ObjectID = "O1s-wI-Xxd"; */
+"O1s-wI-Xxd.text" = "手机程式设计";
+
+/* Class = "UIButton"; normalTitle = "相簿"; ObjectID = "Ofe-ks-kRb"; */
+"Ofe-ks-kRb.normalTitle" = "相簿";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "QMB-he-D8y"; */
+"QMB-he-D8y.text" = "Email";
+
+/* Class = "UITextField"; text = "女"; ObjectID = "Qpm-91-Nob"; */
+"Qpm-91-Nob.text" = "女";
+
+/* Class = "UILabel"; text = "学号："; ObjectID = "VSn-gZ-96X"; */
+"VSn-gZ-96X.text" = "学号：";
+
+/* Class = "UILabel"; text = "性别"; ObjectID = "Zjd-tv-Vcl"; */
+"Zjd-tv-Vcl.text" = "性别";
+
+/* Class = "UILabel"; text = "班别"; ObjectID = "cR4-lk-wHB"; */
+"cR4-lk-wHB.text" = "班别";
+
+/* Class = "UILabel"; text = "电话"; ObjectID = "cW7-gp-YbI"; */
+"cW7-gp-YbI.text" = "电话";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "czf-ED-P4Z"; */
+"czf-ED-P4Z.text" = "Label";
+
+/* Class = "UILabel"; text = "no"; ObjectID = "fea-Zd-lBv"; */
+"fea-Zd-lBv.text" = "no";
+
+/* Class = "UILabel"; text = "照片"; ObjectID = "g6q-Sc-j4C"; */
+"g6q-Sc-j4C.text" = "照片";
+
+/* Class = "UILabel"; text = "地址"; ObjectID = "joh-0P-JvA"; */
+"joh-0P-JvA.text" = "地址";
+
+/* Class = "UILabel"; text = "学号"; ObjectID = "kwN-YY-3TB"; */
+"kwN-YY-3TB.text" = "学号";
+
+/* Class = "UILabel"; text = "班别"; ObjectID = "l6n-T3-ktK"; */
+"l6n-T3-ktK.text" = "班别";
+
+/* Class = "UILabel"; text = "性别"; ObjectID = "p1y-Pa-IX5"; */
+"p1y-Pa-IX5.text" = "性别";
+
+/* Class = "UIButton"; normalTitle = "新增资料"; ObjectID = "ug2-Xw-BEC"; */
+"ug2-Xw-BEC.normalTitle" = "新增资料";
+
+/* Class = "UIButton"; normalTitle = "相簿"; ObjectID = "umH-Cj-mMT"; */
+"umH-Cj-mMT.normalTitle" = "相簿";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "un8-sv-X92"; */
+"un8-sv-X92.text" = "Label";
+
+/* Class = "UILabel"; text = "照片"; ObjectID = "yUc-TL-v0n"; */
+"yUc-TL-v0n.text" = "照片";
+
+/* Class = "UILabel"; text = "地址"; ObjectID = "yjl-hz-4nr"; */
+"yjl-hz-4nr.text" = "地址";
+
+/* Class = "UIButton"; normalTitle = "导航"; ObjectID = "zyh-M4-wyY"; */
+"zyh-M4-wyY.normalTitle" = "导航";
+
+"XVv-Hv-ir2.text" = "测试";

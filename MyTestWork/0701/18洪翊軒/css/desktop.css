@@ -1,0 +1,561 @@
+/* Global */
+:root {
+  /*定義一個變數*/
+  --primaryColor: #ff6060;
+}
+
+* {
+  /*最下面加了內距15px版面會跑掉所以加了box-sizing固定內容*/
+  box-sizing: border-box;
+  font-family: Arial, "黑體", sans-serif;
+}
+
+/*浮動問題高度會消失需在div加入*/
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  height: 2000px;
+}
+
+p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5em; /*行高調整*/
+  font-weight: 300; /*字粗細*/
+  letter-spacing: 2px; /*字跟字距離*/
+}
+
+h2 {
+  font-size: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.fixed-width {
+  width: 960px;
+  margin: auto;
+}
+
+/* 12網格系統 */
+.col-1 {
+  width: calc(100% / 12 * 1);
+}
+.col-2 {
+  width: calc(100% / 12 * 2);
+}
+.col-3 {
+  width: calc(100% / 12 * 3);
+}
+.col-4 {
+  width: calc(100% / 12 * 4);
+}
+.col-5 {
+  width: calc(100% / 12 * 5);
+}
+.col-6 {
+  width: calc(100% / 12 * 6);
+}
+.col-7 {
+  width: calc(100% / 12 * 7);
+}
+.col-8 {
+  width: calc(100% / 12 * 8);
+}
+.col-9 {
+  width: calc(100% / 12 * 9);
+}
+.col-10 {
+  width: calc(100% / 12 * 10);
+}
+.col-11 {
+  width: calc(100% / 12 * 11);
+}
+.col-12 {
+  width: calc(100% / 12 * 12);
+}
+
+[class*="col"] {
+  float: left;
+  padding: 15px;
+  /* background-color: var(--primaryColor); */
+}
+
+.no {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+/*權重 important >id > class > tag*/
+.nopa {
+  /* margin左右間距消除，置中問題還是存在 */
+  /* margin-left: -15px;
+    margin-right: -15px; */
+  /* margin: 0 -15px; */
+  /* 把原本展開的padding收回去是比較好的做法 */
+  /* css執行的方式是由上到下，這樣會產生有些設定會被下面的樣式給蓋回去。
+因此css有個權重關鍵字，權重低得無法蓋過權重高的樣式。
+important > id > class > tag */
+  padding: 0 !important;
+}
+
+.btn {
+  display: inline-block; /*行內元素轉區塊*/
+  padding: 8px 20px;
+  background-color: var(--primaryColor);
+  color: #fff;
+  text-decoration: none;
+}
+
+/*插一條線 要用虛擬元素且要相對定位*/
+.line {
+  position: relative;
+}
+/*換成白色線用虛擬元素要定位*/
+.light {
+  position: relative;
+}
+/*插一條線 要用虛擬元素且要相對定位*/
+.line::before {
+  content: "";
+  display: block; /*虛擬元素屬於行內元素要轉成 block這樣線才會有寬高（長度）*/
+  position: absolute; /*要受到前面relative控制所以要用absolute*/
+
+  border-top: 3px solid var(--primaryColor); /*上外框線 solid表示實體線*/
+  width: 60px;
+  top: 22px;
+  left: 5px;
+}
+
+.light::before {
+  content: "";
+  display: block; /*虛擬元素屬於行內元素要轉成 block這樣線才會有寬高（長度）*/
+  position: absolute; /*要受到前面relative控制所以要用absolute*/
+
+  border-top: 3px solid #fff; /*上外框線 solid表示實體線*/
+  width: 60px;
+  top: 22px;
+  left: 5px;
+}
+/* 插一條左方直線 */
+.line-left {
+  position: relative;
+}
+
+.line-left::before {
+  content: "";
+  display: block; /*虛擬元素屬於行內元素要轉成 block這樣線才會有寬高（長度）*/
+  position: absolute; /*要受到前面relative控制所以要用absolute*/
+
+  border-left: 3px solid rgba(255, 255, 255, 0.5); /*上外框線 solid表示實體線*/
+  height: 70px;
+  top: -5px;
+  left: -22px;
+}
+
+/* Global End */
+
+/* nav-info */
+#nav-info {
+  /* height: 50px; */
+  /* line-height: 50px; 置中 */
+  background-color: rgba(255, 255, 255, 0); /*選單加透明色*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute; /*兩個nav重疊在一起*/
+}
+
+#nav-info a {
+  /*id層級比class要高所以下面兩項拉出去單獨作設定*/
+  /* text-decoration: none; /*拿掉底線*/
+  /* color: #000; */
+  display: inline-block; /*轉成行內元素*/
+  padding-left: 5px;
+  padding-right: 5px;
+  padding: 8px 5px;
+}
+
+#nav-info .addr {
+  float: left;
+  /*因為donate是用padding所以希望都用padding*/
+  /* line-height: 50px; */
+  padding: 8px 5px;
+}
+
+#nav-info .register {
+  float: right;
+  /*因為donate是用padding所以希望都用padding*/
+  /* line-height: 50px; */
+}
+
+#nav-info .register li {
+  float: left;
+  /* margin: 0 5px; */
+  /* list-style: none; */
+}
+
+#nav-info .donate {
+  /*分開donate跟register*/
+  margin-left: 30px;
+  float: right;
+}
+/* nav-info end */
+
+/* nav */
+nav {
+  background-color: rgba(255, 255, 255, 0); /*選單加透明色*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: absolute; /*兩個nav重疊在一起*/
+  top: 74px;
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+}
+nav a {
+  display: block; /*才可以設padding*/
+  padding: 8px 15px; /*字才會分開*/
+}
+nav .logo {
+  float: left;
+}
+nav .logo img {
+  float: left;
+  margin: 0 1.5857em 0.7875em 0;
+}
+nav .menu {
+  float: right;
+}
+
+nav .menu li {
+  float: left;
+}
+/* nav end */
+/* header */
+header {
+  height: 800px;
+  background-image: url(../images/bg.jpeg);
+  background-position: center; /*置中*/
+  background-repeat: no-repeat; /*圖片不重複*/
+  background-size: cover; /*伸展圖片符合寬度*/
+}
+
+/* header end */
+
+/* side */
+#side {
+  background-color: rgba(94, 90, 90, 0.7);
+  position: absolute;
+  color: #fff;
+  top: 680px;
+}
+
+#side .date {
+  display: table;
+  vertical-align: middle;
+  background-color: var(--primaryColor);
+  height: 60px;
+  width: 60px;
+}
+
+#side .day {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 10px;
+}
+
+#side .day h3 {
+  font-size: 30px;
+  font-weight: normal;
+  text-align: center;
+}
+
+#side .col-10 i {
+  padding-right: 5px;
+  float: left;
+  color: #fff;
+}
+
+#side .col-10 h5 {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#side .col-10 a {
+  font-size: 20px;
+  color: #fff;
+}
+
+#side .col-4 {
+  text-align: center;
+  color: #fff;
+  padding-top: 30px;
+}
+
+#side .col-2 a {
+  display: inline-block;
+  border: 2px solid rgb(168, 167, 167);
+  color: #fff;
+  height: 80px;
+  width: 120px;
+  padding: 7px;
+  padding-top: 30px;
+}
+
+#side .btn {
+  padding: 22px 43px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#side .btn:hover {
+  border: 3px solid var(--primaryColor);
+  color: var(--primaryColor);
+}
+/* side end */
+
+/* feature */
+#feature {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#feature h3 {
+  font-size: 30px;
+  font-weight: normal; /*取消粗體變正常顯示*/
+  line-height: 1em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#feature p {
+  padding-top: 15px;
+  padding-bottom: 30px; /*h3原本top 15px+p 15px*/
+}
+
+/* 直接設定col-5可能會干擾到其他的樣式 */
+#feature .feature-gallery {
+  padding: 10px 40px;
+}
+/* feature end */
+
+/* events */
+#events {
+  background-color: #aaa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* background-image: url(../../images/bg2.jpeg); */
+  background-image: linear-gradient(
+      rgba(255, 96, 96, 0.5),
+      rgba(255, 96, 96, 0.5)
+    ),
+    url(../images/bg2.jpeg);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff; /*所有p段落*/
+}
+#events p {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff; /*各別p段落*/
+}
+/* events end */
+/* gallery */
+#gallery .col-4 {
+  height: 630px;
+  /* background-color: #ff6060; */
+  overflow: hidden; /*如果圖片超過隱藏圖片*/
+}
+/* gallery end */
+
+/* upcoming */
+#upcoming {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/bg3.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+#upcoming .content {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  height: 80px;
+  display: table;
+  width: 100%;
+  padding: 10px;
+}
+
+#upcoming .date {
+  background-color: var(--primaryColor);
+  text-align: center;
+  /* line-height: 2.5em; */
+  /* padding: 20px 10px; */
+  height: 80px;
+  width: 70px;
+  display: table;
+}
+#upcoming .day {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#upcoming .title,
+.time,
+.addr {
+  display: table-cell;
+  vertical-align: middle;
+  width: calc(100% / 3);
+}
+/* upcoming end */
+
+/* blog  */
+#blog {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#blog .pic {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#blog .pic .date {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: var(--primaryColor);
+  bottom: 4px;
+  /* 處理置中 */
+  display: table;
+  text-align: center;
+}
+
+#blog .pic .date .day {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#blog h3 {
+  margin-bottom: 20px;
+}
+
+#blog p {
+  margin-bottom: 20px;
+}
+/* blog end  */
+/* pastor */
+#pastor {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/bg4.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+#pastor p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#pastor .content {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  height: 80px;
+  width: 100%;
+}
+
+#pastor .content h3 {
+  line-height: 1em; 
+  font-weight: 100; 
+  letter-spacing: 1px;
+  padding-left: 60px;
+}
+
+#pastor .content p a {
+  color: var(--primaryColor);
+}
+
+
+#pastor .player {
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  /* line-height: 2.5em; */
+  /* padding: 20px 10px; */
+  height: 50px;
+  width: 50px;
+  display: table;
+  float: left;
+}
+#pastor .player:hover {
+  border: none;
+  background-color: var(--primaryColor);
+  color: #fff;
+}
+#pastor .play {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* pastor end */
+/* footer */
+footer {
+  height: 50px;
+  line-height: 50px;
+}
+
+footer .col-4 {
+  text-align: right;
+}
+
+footer .col-4 a {
+  margin: 0 10px;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #aaa;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+}
+
+footer .col-4 a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* footer end */

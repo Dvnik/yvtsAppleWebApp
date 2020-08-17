@@ -1,0 +1,9 @@
+//App名稱本地化
+"CFBundleDisplayName" = "我的資料庫";
+//Info.plist本地化
+"NSCameraUsageDescription" = "使用相機以更換大頭照";
+"NSPhotoLibraryUsageDescription" = "使用相簿以更換大頭照";
+
+"NaviagtionTitle" = "我的資料庫";
+"EditButtonTitle" = "編輯";
+"AddButtonTitle" = "新增";
