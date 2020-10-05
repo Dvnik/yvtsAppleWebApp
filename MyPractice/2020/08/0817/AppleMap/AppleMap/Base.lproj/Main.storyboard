@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AppleMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zka-Vq-Pmj">
+                                <rect key="frame" x="0.0" y="195" width="414" height="701"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CWC-y5-4nI">
+                                <rect key="frame" x="20" y="64" width="61.5" height="111"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="方位：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qf-WL-AXn">
+                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高度：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1D-e6-arB">
+                                        <rect key="frame" x="0.0" y="29" width="61.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="緯度：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf4-2k-LWk">
+                                        <rect key="frame" x="0.0" y="58" width="61.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="經度：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXO-wp-E47">
+                                        <rect key="frame" x="0.0" y="87" width="61.5" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CJ0-0s-qB4">
+                                <rect key="frame" x="86.5" y="64" width="41" height="111"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYH-Ah-9Fn">
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVB-oc-org">
+                                        <rect key="frame" x="0.0" y="29" width="41" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4o-95-vVk">
+                                        <rect key="frame" x="0.0" y="58" width="41" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="未知" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rS-MU-DzH">
+                                        <rect key="frame" x="0.0" y="87" width="41" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="dRc-tE-JTT">
+                                <rect key="frame" x="194" y="104" width="200" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Aks-UX-Gbg"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="標準"/>
+                                    <segment title="衛星"/>
+                                    <segment title="混合"/>
+                                    <segment title="3D"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControlPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="RpX-iF-fPK"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="CJ0-0s-qB4" firstAttribute="top" secondItem="CWC-y5-4nI" secondAttribute="top" id="02D-mW-nw8"/>
+                            <constraint firstItem="dRc-tE-JTT" firstAttribute="centerY" secondItem="CJ0-0s-qB4" secondAttribute="centerY" id="NEk-Bk-hWw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dRc-tE-JTT" secondAttribute="trailing" constant="20" id="Nku-0A-Q0M"/>
+                            <constraint firstAttribute="bottom" secondItem="zka-Vq-Pmj" secondAttribute="bottom" id="XR6-IK-uC9"/>
+                            <constraint firstItem="zka-Vq-Pmj" firstAttribute="top" secondItem="CWC-y5-4nI" secondAttribute="bottom" constant="20" id="cwb-P1-0IZ"/>
+                            <constraint firstItem="CWC-y5-4nI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fiH-cR-nwp"/>
+                            <constraint firstItem="zka-Vq-Pmj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hTo-48-hRs"/>
+                            <constraint firstItem="CWC-y5-4nI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kEm-xJ-K7B"/>
+                            <constraint firstAttribute="trailing" secondItem="zka-Vq-Pmj" secondAttribute="trailing" id="ozO-4h-aTu"/>
+                            <constraint firstItem="CJ0-0s-qB4" firstAttribute="leading" secondItem="CWC-y5-4nI" secondAttribute="trailing" constant="5" id="ym7-Ty-SmP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblAltitude" destination="jVB-oc-org" id="o3F-kW-eci"/>
+                        <outlet property="lblDirection" destination="wYH-Ah-9Fn" id="0ta-hJ-wiG"/>
+                        <outlet property="lblLatitude" destination="d4o-95-vVk" id="LYI-Re-Ldg"/>
+                        <outlet property="lblLongitude" destination="6rS-MU-DzH" id="2SL-Z5-058"/>
+                        <outlet property="mapView" destination="zka-Vq-Pmj" id="Ela-Ri-uXu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
